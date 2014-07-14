@@ -1,0 +1,125 @@
+<html>
+    <head>
+
+        <!--<script src="blink.js"></script>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">-->
+        <style>
+            body {
+                background-color: #f0fdfc;
+                font-family: Arial;
+                color: #2a2120;
+
+
+            }
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+            #buffer {
+                padding: 20px 10px 20px 10px;
+                font-size: 15px;
+                /*margin-left: 20px;
+                color: red;*/
+            }
+            legend {
+                font-size: 32px;
+                color: #2a2120;
+                font-weight: bold;
+            }
+            fieldset {
+                border: 4px solid #2a2120;
+            }
+            .wrapper {
+                text-align: center;
+            }
+
+            .buttonxx {
+                /*position: absolute;
+                color: blue;*/
+                width: 100%;
+                padding: 30px;
+                font-size: 18px;
+                color: #333333;
+            }
+            .textCenter {
+                text-align: center;
+            }
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+            }
+            .button {
+                -moz-transition: all .2s ease-in;
+                -o-transition: all .2s ease-in;
+                -webkit-transition: all .2s ease-in;
+                width: 100%;
+                font-family: Arial;
+                color: #ffffff;
+                font-size: 25px;
+                background: #109bb0;
+                padding: 30px;
+                text-decoration: none;
+                border: solid #1f628d 0px;
+                margin: 40px 0 20px 0;
+
+            }
+
+            .button:hover {
+                background: #3fafbf;
+                text-decoration: none;
+                color: #ffffff;
+                cursor: pointer; 
+                cursor: hand;
+            }
+            .error {
+                color:#d32917;
+                -webkit-animation: pulsate .7s ease-out;
+                -webkit-animation-iteration-count: infinite; 
+                opacity: 0.5;
+            }
+            .success {
+                color:#6bb200;
+                -webkit-animation: pulsateWin 1.4s ease-out;
+                -webkit-animation-iteration-count: infinite; 
+                /*opacity: 0.7;*/
+            }
+
+            @-webkit-keyframes pulsate {
+                0% {-webkit-transform: color: 0.5;}
+                50% {opacity: 1.0;}
+                100% {-webkit-transform: opacity: 0.5;}
+            }
+
+            @-webkit-keyframes pulsateWin {
+                0% {-webkit-transform: color:#6bb200;}
+                50% {color: #86df00;}
+                100% {-webkit-transform: color:#6bb200;}
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <!--<h1 style="position: absolute; top: 0; right: 0">buffer</h1>-->
+        <!--<img src="matrix-48.png">-->
+
+        <form>
+            <fieldset>
+                <legend class="textCenter"> Serial data to arduino matrix </legend>
+                <div id="buffer"></div>
+            </fieldset>
+        </form>
+        <div class="wrapper">
+            <button class="button">Click to send data to arduino matrix</button>
+        </div>
+        <p class="textCenter"></p>
+        <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+
+</html>

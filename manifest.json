@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Just the Temp to arduino matrix..",
+    "version": "1.23",
+    "description": "Send Just the Temp weather data via serial connection to Arduino.",
+
+    "permissions": ["http://justthetemp.com/*", "serial", "geolocation", "alarms"],
+    "minimum_chrome_version": "23",
+    "icons": {
+        "16": "matrix-16.png",
+        "48": "matrix-48.png",
+        "64": "matrix-64.png",
+        "128": "matrix-128.png"
+    },
+    "app": {
+        "background": {
+            "scripts": ["launch.js", "main.js"]
+            //"transient": true,
+
+        }
+    }
+}
