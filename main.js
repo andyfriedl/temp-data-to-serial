@@ -41,7 +41,7 @@ getLocation();
 function getTemp(position) {
     pos = position.coords.latitude + "," + position.coords.longitude;
     var http = new XMLHttpRequest();
-    http.open("GET", "http://justthetemp.com/getWeather.php?position=" + pos, true);
+    http.open("GET", "**** link to your weather api of choice ****" + pos, true);
 
     http.onload = function(event) {
         var parsedData = '';
