@@ -7,7 +7,7 @@ var serialPort = '';
 
 var onGetDevices = function(ports) {
     for (var i = 0; i < ports.length; i++) {
-        console.log('fn onGetDevices for loop:' + ports[i].path);
+        //console.log('fn onGetDevices for loop:' + ports[i].path);
     }
     serialPort = ports[0].path;
 
@@ -41,7 +41,7 @@ getLocation();
 function getTemp(position) {
     pos = position.coords.latitude + "," + position.coords.longitude;
     var http = new XMLHttpRequest();
-    http.open("GET", "http://link-to-your-api" + pos, true);
+    http.open("GET", "http://justthetemp.com/getWeather.php?position=" + pos, true);
 
     http.onload = function(event) {
         var parsedData = '';
@@ -139,7 +139,6 @@ chrome.alarms.create('getData', {
     periodInMinutes: 2
 });
 
-
 chrome.alarms.onAlarm.addListener(function (alarm) {
     if (alarm.name == 'getData') {
         console.log('In getData alarm' + sendToMatrixData);
@@ -150,18 +149,18 @@ chrome.alarms.onAlarm.addListener(function (alarm) {
 /**/
 //connection.send(sendToMatrixData);
 // not showing in log.
-/*
+
 setInterval(function() {
     console.log('In interval fn, sent: ' + sendToMatrixData);
     getLocation();
     connection.send('..' + sendToMatrixData + '..');
 }, 30000);
-*/
+
 //setInterval(connection.send(interval),600000);
 
 
 chrome.app.runtime.onLaunched.addListener(function() {
-    console.log('App started, sending data...' + sendToMatrixData);
+    console.log('App launched, sending data...' + sendToMatrixData);
     // wait to receive data before send
     setTimeout(function() {
         console.log('\n\n *** In onLaunched setTimeout fn, sent: ' + sendToMatrixData + ' ***');
